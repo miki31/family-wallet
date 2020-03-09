@@ -9,19 +9,20 @@ class App extends Component {
     };
 
     async componentDidMount() {
-        const response = await fetch('http://172.16.9.2:8080/');
+        const response = await fetch('/models');
         const body = await response.json();
-        console.log(body);
-        console.log("body");
+        console.log(JSON.stringify(body));
+        // console.log(body);
+        // console.log("body");
         this.setState({ groups: body, isLoading: false });
-    }
+    };
 
     render() {
         const {groups, isLoading} = this.state;
 
-        // if (isLoading) {
-        //     return <p>Loading...</p>;
-        // }
+        if (isLoading) {
+            return <p>Loading...</p>;
+        }
 
         return (
             <div className="App">
