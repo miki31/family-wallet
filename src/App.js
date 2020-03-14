@@ -7,6 +7,7 @@ class App extends Component {
         isLoading: true,
         groups: []
     };
+
     //test
 
     async componentDidMount() {
@@ -15,7 +16,7 @@ class App extends Component {
         console.log(JSON.stringify(body));
         // console.log(body);
         // console.log("body");
-        this.setState({ groups: body, isLoading: false });
+        this.setState({groups: body, isLoading: false});
     };
 
     render() {
@@ -30,12 +31,12 @@ class App extends Component {
                 {/*<header className="App-header">*/}
                 {/*    <img src={logo} className="App-logo" alt="logo" />*/}
                 {/*    <div>*/}
-                        <h2>Hello WORLD _____ in REACT and java_SPRING!!!!!!!!</h2>
-                        {groups.map(group =>
-                            <div key={group.age}>
-                                {group.name}
-                            </div>
-                        )}
+                <h2>Hello WORLD _____ in REACT and java_SPRING!!!!!!!!</h2>
+                {groups.map(group =>
+                    <div key={group.age}>
+                        {group.name}
+                    </div>
+                )}
                 {/*    </div>*/}
                 {/*</header>*/}
             </div>
@@ -43,24 +44,24 @@ class App extends Component {
     };
 
 
-  // return (
-  //   <div className="App">
-  //     <header className="App-header">
-  //       <img src={logo} className="App-logo" alt="logo" />
-  //       <p>
-  //         Edit <code>src/App.js</code> and save to reload.
-  //       </p>
-  //       <a
-  //         className="App-link"
-  //         href="https://reactjs.org"
-  //         target="_blank"
-  //         rel="noopener noreferrer"
-  //       >
-  //         Learn React
-  //       </a>
-  //     </header>
-  //   </div>
-  // );
+    // return (
+    //   <div className="App">
+    //     <header className="App-header">
+    //       <img src={logo} className="App-logo" alt="logo" />
+    //       <p>
+    //         Edit <code>src/App.js</code> and save to reload.
+    //       </p>
+    //       <a
+    //         className="App-link"
+    //         href="https://reactjs.org"
+    //         target="_blank"
+    //         rel="noopener noreferrer"
+    //       >
+    //         Learn React
+    //       </a>
+    //     </header>
+    //   </div>
+    // );
 }
 
 export default App;
